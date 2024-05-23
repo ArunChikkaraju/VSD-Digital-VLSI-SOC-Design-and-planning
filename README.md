@@ -9,8 +9,8 @@ We will see how to do synthesis for the particular design picorv32 using the ope
 * First of all,we need to make sure that the virtual machine is working
 * If everything is fine we can see a terminal inside the machine like this
 
-  
-![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/e8d82060-fce6-4de7-8acd-bf22f6579b65)
+  ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/4f6d2d99-f51a-42ac-85a2-e7f9a89e492f)
+
 
   
 
