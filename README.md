@@ -1,8 +1,6 @@
 # VSD-Digital-VLSI-SOC-Design-and-planning
 
-# Project Title
 
-Simple overview of use/purpose.
 
 ## Description
 
