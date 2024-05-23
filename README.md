@@ -21,15 +21,48 @@ We will see how to do synthesis for the particular design picorv32 using the ope
   installing and configuring the software manually. Docker images act as blueprints for these containers, making it easy to share and replicate the setup. This guarantees a 
   smooth and consistent experience across different development stages and environments.
 
-* so,after running the docker command we can the terminal like this
+* so,after running the docker command we can see the terminal like this
 
   ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/0e61f010-0623-4ff8-bac4-dfee141a2a50)
 
 * we need to run the ./flow.tcl script -interactive where there are commands which explains how the various tools in the openlane should interact with eachother and all the information about how to run the flow in an organised manner
 * And regarding the switch in the above command it is specifically mentioned that it should be an interactive mode means instead of automating the entire flow at once we can run the commands in a sequential order.
-* After the tool got invoked we see the terminal lik this
+* After the tool got invoked we see the terminal like this
 
   ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/65681db6-ae51-4a5c-8eb5-f694961749c8)
+
+* we should run these two commands before going for the synthesis step
+  package require openlane 0.9
+  prep -design picorv32a
+
+
+  ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/675a9c6a-f53d-4b39-8bac-c084e5d96857)
+
+
+* After running those above two commands we can see the runs directory is created where the results after every intermediate results are stored in a structural way
+
+  ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/376b6329-be5f-4c27-b4bc-5b4bbb0779b4)
+
+* Now we are good to go to run the synthesis and generate a netlist out of the design using the command run_synthesis
+
+  ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/e2ea5c2b-5f7b-4b11-976c-8725032c5f46)
+
+
+  ### Task-1
+
+  we need to find the dflip flop ratio
+
+  * In the netlist generated we can the dflipflops are mentioned as dfxtp_2
+
+    ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/50879754-30e9-4cb8-b211-e4775fdae22f)
+
+  * if we observe there are 1613 cells are there which are dflipflops
+  * And there are total 14876 cells 
+
+
+    ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/363c2dbe-2cfa-4818-bfd8-7aac5bd38fab)
+
+  * so based on that if we calculate the ratio it is around 0.1084 which is nothing but approximately 10.8 percent out of the total cells
 
 
 
