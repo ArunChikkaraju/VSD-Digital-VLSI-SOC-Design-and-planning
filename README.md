@@ -2,7 +2,16 @@
 
 
 
-## Description
+## DAY1 
+
+We will see how to do synthesis for the particular design picorv32 using the openlane flow and generate the netlist and other necessary reports after the synthesis step
+
+* First of all,we need to make sure that the virtual machine is working
+* If everything is fine we can see a terminal inside the machine like this
+
+  
+
+  
 
 An in-depth paragraph about your project and overview of use.
 
