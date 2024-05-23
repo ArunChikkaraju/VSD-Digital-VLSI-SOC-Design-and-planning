@@ -2,7 +2,7 @@
 
 
 
-## DAY1 
+## DAY-1 
 
 We will see how to do synthesis for the particular design picorv32 using the openlane flow and generate the netlist and other necessary reports after the synthesis step
 
@@ -10,6 +10,9 @@ We will see how to do synthesis for the particular design picorv32 using the ope
 * If everything is fine we can see a terminal inside the machine like this
 
   ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/4f6d2d99-f51a-42ac-85a2-e7f9a89e492f)
+
+
+* We need to go to this path Desktop/work/tools/openlane_working_dir/openlane Before doing the further steps
 
 
   
