@@ -13,6 +13,18 @@ We will see how to do synthesis for the particular design picorv32 using the ope
 
 
 * We need to go to this path Desktop/work/tools/openlane_working_dir/openlane Before doing the further steps
+* Then we need to type docker command
+
+  what is docker exactly?
+  Docker is a tool that simplifies creating, deploying, and running applications in containers. For example, with OpenLane, an open-source VLSI flow, you can package the 
+  entire OpenLane environment and its dependencies into a Docker container. This container ensures that OpenLane runs consistently on any machine, avoiding the hassle of 
+  installing and configuring the software manually. Docker images act as blueprints for these containers, making it easy to share and replicate the setup. This guarantees a 
+  smooth and consistent experience across different development stages and environments.
+
+* so,after running the docker command we can the terminal like this
+
+  ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/0e61f010-0623-4ff8-bac4-dfee141a2a50)
+
 
 
   
