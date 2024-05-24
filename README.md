@@ -67,6 +67,47 @@ We will see how to do synthesis for the particular design picorv32 using the ope
 
 
 
+
+# OpenLane Workshop - Day 2
+
+## Recap of Day 1
+
+On Day 1, we discussed the agenda for the workshop, provided an overview of OpenLane and the tools involved, and demonstrated how to generate a netlist from an existing design (picorv32a) by performing the synthesis step.
+
+## Focus for Day 2
+
+Today, we will concentrate on the floorplanning and placement of the specified design.
+
+## Floorplanning
+
+Before incorporating the generated netlist into the physical hardware die, we need to:
+1. Define the dimensions of the core and die.
+2. Define the location of pre-placed cells or macrocells.
+3. Surround pre-placed cells with decoupling capacitors.
+4. Perform power planning.
+5. Place pins.
+6. Specify logical cell placement blockages.
+
+By using the command `run_floorplan`, we can successfully complete the floorplanning for our design. This command considers various attributes and parameters covering the detailed steps mentioned in the `.tcl` file. The `config.tcl` file in the configuration directory contains various switches set with specific values according to the design requirements.
+
+### Floorplanning Execution
+
+After executing the `run_floorplan` command, if the floorplanning is successful, the terminal will display a success message. The results are stored in the `runs` directory, similar to the post-synthesis step. Once floorplanning is completed, a `.def` file in the design directory will contain the implemented floorplan details.
+
+### Task: Convert Area into Micrometers
+
+In the `.def` file, the area is in micron units (1 micron = 1000 database units). By dividing the parameters `{ 0 0 } { 1046535 798380 }` by 1000, we obtain the dimensions in micrometers.
+
+### Visualizing the Floorplan
+
+We can visually inspect the constructed floorplan using the Magic open-source tool with the following command:
+
+magic -T /home/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+
+
+
+
+
   
 
 An in-depth paragraph about your project and overview of use.
