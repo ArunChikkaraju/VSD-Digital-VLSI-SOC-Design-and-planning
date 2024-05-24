@@ -68,19 +68,15 @@ We will see how to do synthesis for the particular design picorv32 using the ope
 
 
 
-# OpenLane Workshop - Day 2
+## Day 2
 
-## Recap of Day 1
+* So far in the day 1 we have understood about the agenda of doing workshop and the glimpse of the openlane and about the different tools involved in it , finally by taking the example of the existing design which is picorv32a we have generated a netlist from the design by doing the synthesis step.
+* Now we need to concentrate on the floorplanning and placement of the specified design
 
-On Day 1, we discussed the agenda for the workshop, provided an overview of OpenLane and the tools involved, and demonstrated how to generate a netlist from an existing design (picorv32a) by performing the synthesis step.
+### Floorplanning
 
-## Focus for Day 2
-
-Today, we will concentrate on the floorplanning and placement of the specified design.
-
-## Floorplanning
-
-Before incorporating the generated netlist into the physical hardware die, we need to:
+* Before actually incorporating the netlist generated in the physical hardware die we need to specify the dimensions of the core and die and also there are some macro steps  involved in the floorplanning itself those are
+ 
 1. Define the dimensions of the core and die.
 2. Define the location of pre-placed cells or macrocells.
 3. Surround pre-placed cells with decoupling capacitors.
@@ -88,81 +84,34 @@ Before incorporating the generated netlist into the physical hardware die, we ne
 5. Place pins.
 6. Specify logical cell placement blockages.
 
-By using the command `run_floorplan`, we can successfully complete the floorplanning for our design. This command considers various attributes and parameters covering the detailed steps mentioned in the `.tcl` file. The `config.tcl` file in the configuration directory contains various switches set with specific values according to the design requirements.
+* By using the command run_floorplan the floorplanning for our design will be done successfully based on the different attributes or parameters covering the above minute steps mentioned in the .tcl file
 
-### Floorplanning Execution
-
-After executing the `run_floorplan` command, if the floorplanning is successful, the terminal will display a success message. The results are stored in the `runs` directory, similar to the post-synthesis step. Once floorplanning is completed, a `.def` file in the design directory will contain the implemented floorplan details.
-
-### Task: Convert Area into Micrometers
-
-In the `.def` file, the area is in micron units (1 micron = 1000 database units). By dividing the parameters `{ 0 0 } { 1046535 798380 }` by 1000, we obtain the dimensions in micrometers.
-
-### Visualizing the Floorplan
-
-We can visually inspect the constructed floorplan using the Magic open-source tool with the following command:
-
-magic -T /home/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+* So basically if we observe the readme file in the configuration directory we can able to see various switches which can be used at each stage of the design flow
 
 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/d8992f2a-fe31-46dd-953b-29fde9fd5221)
+
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/cf6ec5d3-10dc-4ac2-9371-e6020cae9dcf)
+
+In the above picture for example we can see the switches for the aspect ratio and the utilization factor which are primarly responsible for determining the core and the die area like that all these switches are set to with some values in their respective .tcl file according to the design
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/2febfec5-bc0e-42aa-9429-fe6d4c7eda35)
+
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/f61fe1dc-307a-418f-a705-7776d083d96b)
+
+we can see that all the switches are assigned with some default values
+
+Based on out requirement we can the values of the switches accordingly otherwise the default values are set
+
+* After the command run_floorplan if the floorplanning is successful then 
+The terminal will be like this
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/1531eb99-dcce-4b01-85f0-558818443b38)
+
+
+* Just like the post synthesis step we can see the results are stored in the runs directory
 
 
 
-  
-
-An in-depth paragraph about your project and overview of use.
-
-## Getting Started
-
-### Dependencies
-
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
-## Authors
-
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
