@@ -111,7 +111,26 @@ The terminal will be like this
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/1531eb99-dcce-4b01-85f0-558818443b38)
 
 
-* Just like the post synthesis step we can see the results are stored in the runs directory
+* Once the floorplanning is done we can able to .def file in the design directory which tells about the implemented floor plan details
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/50d00ed6-347e-4ed0-8845-27adc39e7df7)
+
+### Task
+Q) In the def file convert area into micrometers
+In the def file the die area is in micron units 
+1 micron = 1000 data base units
+If we divide those parameters { 0 0 } { 660685 671405 } / 1000 we get dimensions in micrometers
+
+we get length as 660.685 micro meter 
+we get width as 671.405 micro meter
+
+* We can visually see the constructed floorplan for our design using the magic open source tool .For that we need to type the command
+
+```
+magic -T /home/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def & ```
+
+
+
 
 
 
