@@ -126,7 +126,7 @@ we get width as 671.405 micro meter
 
 * We can visually see the constructed floorplan for our design using the magic open source tool .For that we need to type the command
 
-```
+
 magic -T /home/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def & 
 
 
