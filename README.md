@@ -147,6 +147,33 @@ magic -T /home/vsduser/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/3fc14c22-5f84-4a2a-bf00-5d26c69fc6d9)
 
 
+### Floorplanning
+
+* The next step in the design flow is to embibe the netlist to the floorplan which we have created just now
+* For that we need to type the simple command run_placement
+* After executing we can see the terminal as
+
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/79577b70-9fd7-4108-a97b-f8a6c5c5e6e9)
+
+* Now its time to see the placement visually through magic tool
+
+
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/9f336bab-040c-4d87-bc41-10ae58696e2e)
+
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/a2a9e286-0b10-4740-9bc0-d5179b7cdcfb)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/88871966-6026-4b9c-bafe-ab5d3ae8e3d1)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/e2e54838-1880-4635-820a-9ae0b98a3ee6)
+
+
+
+
+
+
 
 
 
