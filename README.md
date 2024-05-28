@@ -68,7 +68,7 @@ We will see how to do synthesis for the particular design picorv32 using the ope
 
 
 
-## Day 2
+## DAY-2
 
 * So far in the day 1 we have understood about the agenda of doing workshop and the glimpse of the openlane and about the different tools involved in it , finally by taking the example of the existing design which is picorv32a we have generated a netlist from the design by doing the synthesis step.
 * Now we need to concentrate on the floorplanning and placement of the specified design
@@ -168,6 +168,71 @@ magic -T /home/vsduser/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/88871966-6026-4b9c-bafe-ab5d3ae8e3d1)
 
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/e2e54838-1880-4635-820a-9ae0b98a3ee6)
+
+
+
+
+##DAY-3
+
+* So far we have done upto the placement stage 
+* In order to understand the library characterization we will concentrate on the one simple cell lets say inverter and we will extract the information related to the timing by doing the transient analysis
+* Finally we will try to place that cell in the existing design picorv32a and see whether it happens or not
+
+### Lab steps to gitclone the VSDSTDcell Design
+
+* we will take an example of the simple cell which is inverter and try to insert that cell in the picorv32 design
+* Before that we need to understand about the cell deeply
+* There is a github repository where the complete details of the inverter cell using skywater is explained in it
+* we will try to clone that repository in our local system
+
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/9753e59a-f1a1-4898-8eb9-231d19e4b677)
+
+* copy the github link and paste it in the terminal along with the git clone command
+
+* now go to the openlane directory and type the command "git clone https://github.com/nickson-jose/vsdstdcelldesign.git "
+* Once it is cloned we can see the creation of directory named “vsdstdcelldesign”
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c9688fcd-639b-4cb0-81cb-c4c105f46ccb)
+
+* Before playing around with the properties of the inverter cell if we observe the .mag file to understand the layer structure used for designing inverter layout
+  
+* In order to open the .mag file we need the .tech file which is available inside the the pdks directory so we need to copy that and paste in the present directory
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/2981e89b-5841-45c0-a0df-8f6e51675605)
+
+* Now we can see that sky130A.tech file is copied in the present directory
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/2e2ddeee-4f07-4488-9dbf-cb414557a4ba)
+
+* Its time to visually see the layout of the inverter / std cell by using the magic tool with the command
+
+* magic -T sky130A.tech sky130_inv.mag &
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c8c7c4af-a693-4e49-8b56-d6743974c7a2)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/78bc578b-d3c4-47bf-a496-612f12142c4b)
+
+* On the right side of the magic tool we can see the colour palette which is nothing but the different metal layers indicators and if we place the mouse pointer to any particular that selected layer name is displayed on the right top
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/b0832c11-fff7-4373-bd44-b51a71d82c4e)
+
+### checking whether the layout performs intended inverter functionality
+
+*
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
