@@ -96,10 +96,12 @@ We will see how to do synthesis for the particular design picorv32 using the ope
 
 In the above picture for example we can see the switches for the aspect ratio and the utilization factor which are primarly responsible for determining the core and the die area like that all these switches are set to with some values in their respective .tcl file according to the design
 
-![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/2febfec5-bc0e-42aa-9429-fe6d4c7eda35)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/ed95b254-3eea-4ae2-a352-36a88e739187)
 
 
-![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/f61fe1dc-307a-418f-a705-7776d083d96b)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c953190b-8e9a-4a83-aa09-abc11e85f30a)
+
 
 we can see that all the switches are assigned with some default values
 
@@ -127,7 +129,31 @@ we get width as 671.405 micro meter
 * We can visually see the constructed floorplan for our design using the magic open source tool .For that we need to type the command
 
 
-magic -T /home/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def & 
+magic -T /home/vsduser/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def & 
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/0a938481-a847-4f14-a349-c78bcfaf9843)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/517e7896-11ac-42e1-b82f-4696ce2b8a30)
+
+
+* press s and v to select the entire layout and bring to the center of the screen and to zoom to the particular part of  the layout press left click create a box where you want to see the layout in detail and press right click to lock the box now press z
+
+* so if we zoom further we can see the pins clearly select any particular pin by clicking on the s and we can observe the other window called tkcon where the description the selection pin is seen when we type “what” on that terminal
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/8526e63b-b4c4-4ee1-8973-db7055434861)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/639ea7e1-6456-4bdb-80bb-2d3d096586be)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/3fc14c22-5f84-4a2a-bf00-5d26c69fc6d9)
+
+
+
+
+
+
+
+
+
 
 
 
