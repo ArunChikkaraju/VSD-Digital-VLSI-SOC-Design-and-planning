@@ -172,7 +172,7 @@ magic -T /home/vsduser/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 
 
-##DAY-3
+## DAY-3
 
 * So far we have done upto the placement stage 
 * In order to understand the library characterization we will concentrate on the one simple cell lets say inverter and we will extract the information related to the timing by doing the transient analysis
