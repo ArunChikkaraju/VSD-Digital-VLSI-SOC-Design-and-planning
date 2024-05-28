@@ -32,8 +32,8 @@ We will see how to do synthesis for the particular design picorv32 using the ope
   ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/65681db6-ae51-4a5c-8eb5-f694961749c8)
 
 * we should run these two commands before going for the synthesis step
-  package require openlane 0.9
-  prep -design picorv32a
+* package require openlane 0.9
+* prep -design picorv32a
 
 
   ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/675a9c6a-f53d-4b39-8bac-c084e5d96857)
@@ -147,7 +147,7 @@ magic -T /home/vsduser/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/3fc14c22-5f84-4a2a-bf00-5d26c69fc6d9)
 
 
-### Floorplanning
+### Placement
 
 * The next step in the design flow is to embibe the netlist to the floorplan which we have created just now
 * For that we need to type the simple command run_placement
