@@ -243,6 +243,19 @@ magic -T /home/vsduser/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![Screenshot 2024-05-28 143714](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c84737fc-37cf-4164-9ab5-6f9442ce5251)
 
 
+![Screenshot 2024-05-28 143900](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c14a55b6-8e9a-49db-acc0-93ef6e8a9b48)
+
+
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/433ab989-8fe7-4f59-9adc-37ae950e8fed)
+
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/12cd44f7-906e-4dfa-89c3-d3de13441be0)
+
+
+
+
+
 
 
 
