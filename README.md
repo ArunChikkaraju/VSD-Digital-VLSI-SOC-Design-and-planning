@@ -258,10 +258,50 @@ magic -T /home/vsduser/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/64dcca4b-76d9-4929-9278-e674029faa86)
 
-20% transistion of output
+* 80 percent of 3.3 is 2.64
+* 20 percent of 3.3 is 0.66
+
+rise time 20% transistion of output
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/91c2a0c7-a657-4bf0-9061-2f35fea66052)
 
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/9b143b7e-4f55-4b27-aa21-2cda36807e53)
+
+rise time 80% transition of output
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/2e000840-bb08-4ac2-9e3f-6a2eeb81af1b)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/279304c8-7f93-4cba-963b-edc3342786d0)
+
+fall time 80% transistion of output
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/cd71a8c1-03ec-4998-9879-d2c91fda83bc)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/22cd3cda-d54e-4af8-bb0f-3c3cc722aa42)
+
+fall time 20% transistion of output
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c21ad5e8-ff7a-451a-9835-d19f63f9769c)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/4f932fa6-a63c-4003-9f10-d052f475328b)
+
+50 percent of 3.3 is 1.65
+
+input fall and output rise
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/307022d3-c0a6-4fd0-9cd3-5487b0578b82)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/6e7a4f81-e15f-4a1e-9ca0-e4e389cc638e)
+
+
+output fall and input rise
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/b749d814-bc65-492d-8462-44ae43ef76af)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/eea9906c-0db6-432b-bf66-eb5492a268c2)
+
+
+
+
+
+
 
 
 
