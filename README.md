@@ -219,43 +219,53 @@ magic -T /home/vsduser/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 ### checking whether the layout performs intended inverter functionality
 
+
+nmos
 ![Screenshot 2024-05-28 142042](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/7cdd5245-a1f1-41e7-a79f-9775fc436b16)
 
+pmos
 ![Screenshot 2024-05-28 142311](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/168dbe1d-d51f-4185-8544-41da7fc32412)
 
-
+drain of pmos and nmos connected to out
 ![Screenshot 2024-05-28 142513](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/de8190fd-5c7c-4c79-9238-dc6c581728f3)
 
-
+source of pmos connected to vdd
 ![Screenshot 2024-05-28 142740](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/2bb86b09-2b84-4ac9-a5ae-05172dc8536a)
 
-
+source of nmos connected to gnd
 ![Screenshot 2024-05-28 142844](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/bad1a7ea-ceda-436d-8244-617246d254f0)
 
 
-
+extract all command to extract the layout to spice
 ![Screenshot 2024-05-28 143309](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/49857b77-0a38-4d9d-843c-868556a84509)
 
-
+checking whether external file created
 ![Screenshot 2024-05-28 143454](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/97fc721c-efd1-4a58-8c04-5343abf05e8f)
 
-
+ext2spice command 
 ![Screenshot 2024-05-28 143714](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c84737fc-37cf-4164-9ab5-6f9442ce5251)
 
-
+spice file created
 ![Screenshot 2024-05-28 143900](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c14a55b6-8e9a-49db-acc0-93ef6e8a9b48)
 
 
-
+checking the unit cell size which is 0.01u
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/433ab989-8fe7-4f59-9adc-37ae950e8fed)
 
-
+editing the netlist according to our requirements
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/12cd44f7-906e-4dfa-89c3-d3de13441be0)
 
+
+invoking the ngspice tool
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/a4878823-d9b5-4264-a589-f4c31835f6e3)
 
+
+changing the capacitance value for smoother transistion of signals 
+*c3 to 2fF
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/aed0a7b3-21d7-45db-80fa-610e4a76ddc6)
 
+
+transient analysis of the graph
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/64dcca4b-76d9-4929-9278-e674029faa86)
 
 * 80 percent of 3.3 is 2.64
