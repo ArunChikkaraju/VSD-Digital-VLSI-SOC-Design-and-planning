@@ -9,7 +9,8 @@ We will see how to do synthesis for the particular design picorv32 using the ope
 * First of all,we need to make sure that the virtual machine is working
 * If everything is fine we can see a terminal inside the machine like this
 
-  ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/4f6d2d99-f51a-42ac-85a2-e7f9a89e492f)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/3d816dbc-c4d5-4999-9db5-12964e52ac60)
+
 
 
 * We need to go to this path Desktop/work/tools/openlane_working_dir/openlane Before doing the further steps
@@ -23,29 +24,33 @@ We will see how to do synthesis for the particular design picorv32 using the ope
 
 * so,after running the docker command we can see the terminal like this
 
-  ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/0e61f010-0623-4ff8-bac4-dfee141a2a50)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/080b93ca-9044-4e16-a1c5-dd3095b5ad53)
+
 
 * we need to run the ./flow.tcl script -interactive where there are commands which explains how the various tools in the openlane should interact with eachother and all the information about how to run the flow in an organised manner
 * And regarding the switch in the above command it is specifically mentioned that it should be an interactive mode means instead of automating the entire flow at once we can run the commands in a sequential order.
 * After the tool got invoked we see the terminal like this
 
-  ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/65681db6-ae51-4a5c-8eb5-f694961749c8)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c4f4163d-1baf-4d46-8d4e-a209736e20bf)
+
 
 * we should run these two commands before going for the synthesis step
 * package require openlane 0.9
 * prep -design picorv32a
 
 
-  ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/675a9c6a-f53d-4b39-8bac-c084e5d96857)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/6c811fb3-4446-4e43-8060-9c0656413f59)
+
 
 
 * After running those above two commands we can see the runs directory is created where the results after every intermediate results are stored in a structural way
 
-  ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/376b6329-be5f-4c27-b4bc-5b4bbb0779b4)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/4e0e3904-7330-4607-a904-8eb3be969905)
+
 
 * Now we are good to go to run the synthesis and generate a netlist out of the design using the command run_synthesis
 
-  ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/e2ea5c2b-5f7b-4b11-976c-8725032c5f46)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/e2ea5c2b-5f7b-4b11-976c-8725032c5f46)
 
 
   ### Task-1
@@ -221,10 +226,12 @@ magic -T /home/vsduser/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 
 nmos
-![Screenshot 2024-05-28 142042](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/7cdd5245-a1f1-41e7-a79f-9775fc436b16)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/9e32a534-e9f7-4033-a6e3-52fa00464eb0)
+
 
 pmos
-![Screenshot 2024-05-28 142311](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/168dbe1d-d51f-4185-8544-41da7fc32412)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/b52f6446-1b7f-4e82-a10d-2adedcbb658a)
+
 
 drain of pmos and nmos connected to out
 ![Screenshot 2024-05-28 142513](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/de8190fd-5c7c-4c79-9238-dc6c581728f3)
@@ -237,27 +244,32 @@ source of nmos connected to gnd
 
 
 extract all command to extract the layout to spice
-![Screenshot 2024-05-28 143309](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/49857b77-0a38-4d9d-843c-868556a84509)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/4f772f4b-1d46-4f05-9c6a-b421806a2920)
+
 
 checking whether external file created
-![Screenshot 2024-05-28 143454](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/97fc721c-efd1-4a58-8c04-5343abf05e8f)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/9a171dfe-5a54-4edc-ab03-42c143870601)
+
 
 ext2spice command 
-![Screenshot 2024-05-28 143714](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c84737fc-37cf-4164-9ab5-6f9442ce5251)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/37404204-bd59-4937-a2a3-b26214e727ab)
+
 
 spice file created
-![Screenshot 2024-05-28 143900](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c14a55b6-8e9a-49db-acc0-93ef6e8a9b48)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/675954ca-bc5a-40d4-8c92-08968a6ed78d)
+
 
 
 checking the unit cell size which is 0.01u
-![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/433ab989-8fe7-4f59-9adc-37ae950e8fed)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/f4aefc39-1b4c-4923-9048-2ef8a834e08f)
+
 
 editing the netlist according to our requirements
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/12cd44f7-906e-4dfa-89c3-d3de13441be0)
 
 
 invoking the ngspice tool
-![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/a4878823-d9b5-4264-a589-f4c31835f6e3)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/f937a290-31c9-4072-b7ad-464baad99e5b)
 
 
 changing the capacitance value for smoother transistion of signals 
