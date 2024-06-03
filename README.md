@@ -225,104 +225,104 @@ magic -T /home/vsduser/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ### checking whether the layout performs intended inverter functionality
 
 
-nmos
+* nmos
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/9e32a534-e9f7-4033-a6e3-52fa00464eb0)
 
 
-pmos
+* pmos
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/b52f6446-1b7f-4e82-a10d-2adedcbb658a)
 
 
-drain of pmos and nmos connected to out
+* drain of pmos and nmos connected to out
 ![Screenshot 2024-05-28 142513](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/de8190fd-5c7c-4c79-9238-dc6c581728f3)
 
-source of pmos connected to vdd
+* source of pmos connected to vdd
 ![Screenshot 2024-05-28 142740](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/2bb86b09-2b84-4ac9-a5ae-05172dc8536a)
 
-source of nmos connected to gnd
+* source of nmos connected to gnd
 ![Screenshot 2024-05-28 142844](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/bad1a7ea-ceda-436d-8244-617246d254f0)
 
 
-extract all command to extract the layout to spice
+* extract all command to extract the layout to spice
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/4f772f4b-1d46-4f05-9c6a-b421806a2920)
 
 
-checking whether external file created
+* checking whether external file created
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/9a171dfe-5a54-4edc-ab03-42c143870601)
 
 
-ext2spice command 
+* ext2spice command 
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/37404204-bd59-4937-a2a3-b26214e727ab)
 
 
-spice file created
+* spice file created
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/675954ca-bc5a-40d4-8c92-08968a6ed78d)
 
 
 
-checking the unit cell size which is 0.01u
+* checking the unit cell size which is 0.01u
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/f4aefc39-1b4c-4923-9048-2ef8a834e08f)
 
 
-editing the netlist according to our requirements
+* editing the netlist according to our requirements
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/12cd44f7-906e-4dfa-89c3-d3de13441be0)
 
 
-invoking the ngspice tool
+* invoking the ngspice tool
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/f937a290-31c9-4072-b7ad-464baad99e5b)
 
 
-changing the capacitance value for smoother transistion of signals 
+* changing the capacitance value for smoother transistion of signals 
 *c3 to 2fF
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/aed0a7b3-21d7-45db-80fa-610e4a76ddc6)
 
 
-transient analysis of the graph
+* transient analysis of the graph
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/64dcca4b-76d9-4929-9278-e674029faa86)
 
 * 80 percent of 3.3 is 2.64
 * 20 percent of 3.3 is 0.66
 
-rise time 20% transistion of output
+* rise time 20% transistion of output
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/91c2a0c7-a657-4bf0-9061-2f35fea66052)
 
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/9b143b7e-4f55-4b27-aa21-2cda36807e53)
 
-rise time 80% transition of output
+* rise time 80% transition of output
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/2e000840-bb08-4ac2-9e3f-6a2eeb81af1b)
 
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/279304c8-7f93-4cba-963b-edc3342786d0)
 
-fall time 80% transistion of output
+* fall time 80% transistion of output
 
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/cd71a8c1-03ec-4998-9879-d2c91fda83bc)
 
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/22cd3cda-d54e-4af8-bb0f-3c3cc722aa42)
 
-fall time 20% transistion of output
+* fall time 20% transistion of output
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c21ad5e8-ff7a-451a-9835-d19f63f9769c)
 
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/4f932fa6-a63c-4003-9f10-d052f475328b)
 
-50 percent of 3.3 is 1.65
+* 50 percent of 3.3 is 1.65
 
-input fall and output rise
+* input fall and output rise
 
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/307022d3-c0a6-4fd0-9cd3-5487b0578b82)
 
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/6e7a4f81-e15f-4a1e-9ca0-e4e389cc638e)
 
 
-output fall and input rise
+* output fall and input rise
 
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/b749d814-bc65-492d-8462-44ae43ef76af)
 
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/eea9906c-0db6-432b-bf66-eb5492a268c2)
 
 
+* Now its time to embed the inverter cell into our design for that there is a github repository where all the libs and files related to the inverter are there we just need to clone that repo into our local system
 
-
- ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/aabd980d-6977-48e5-b16a-9913ef6af98f)
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/aabd980d-6977-48e5-b16a-9913ef6af98f)
 
 
 
@@ -691,10 +691,10 @@ output fall and input rise
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/198943aa-b0dc-4138-a173-5cb306c17aeb)
 
 
-### DAY-5
+## DAY-5
 
 * As a part of the final day we will deal with the creation of PDN(power distribution network) and routing.
-* 
+
 
 ### Generation of POWER Distribution network with command gen_pdn
 
