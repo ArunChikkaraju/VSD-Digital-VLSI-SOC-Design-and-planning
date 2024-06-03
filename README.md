@@ -450,70 +450,124 @@ output fall and input rise
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/11864a0e-5b27-411e-b30d-1e6cb2a4d56a)
 
 
-DAY-4
-So far we have done with the design setup , floorplan , placement and finally learned about the stdcell characterization using the mag file
-For the placement of the new cell in the existing design we may not need the all intricate details ( mag file)
-Only information is needed is about the boundaries pwr,gnd,out ports
-That’s where lef file is generated which is gives the overview of the cell 
-By doing this one can secure the IP (Intellectual property) by hiding the exact details and showing the necessary details only
-First of all, we need to check for the std cell guidelines
-	The input and output ports must lie on the intersection of vertical and horizontal tracks
-	The width of the standard cell must be the multiple powers of the track pitch 
+## DAY-4
+
+* So far we have done with the design setup , floorplan , placement and finally learned about the stdcell characterization using the mag file
+* For the placement of the new cell in the existing design we may not need the all intricate details ( mag file)
+* Only information is needed is about the boundaries pwr,gnd,out ports
+* That’s where lef file is generated which is gives the overview of the cell 
+* By doing this one can secure the IP (Intellectual property) by hiding the exact details and showing the necessary details only
+* First of all, we need to check for the std cell guidelines
+*	The input and output ports must lie on the intersection of vertical and horizontal tracks
+* The width of the standard cell must be the multiple powers of the track pitch 
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/e49d157c-2f47-47ca-9c83-81f18ce62c35)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/5d928d13-0157-47a7-850c-8a715b93a2dd)
 
  
- 
-Now open the inverter layout again then press g to enable the grid 
-Change the grid dimensions accordingly
-Format of grid command
-grid x-spacing y-spacing x-orgin y-origin
-so the command will be grid 0.46 0.34 0.23 0.17
- 
- 
-We can see that the input and output ports must lie on the intersection of vertical and horizontal tracks
-Saving those changes as a file name sky130A_vsdinv.mag
- 
- 
-File is created and the layout is opened
+* Now open the inverter layout again then press g to enable the grid 
+* Change the grid dimensions according to the dimensions mentioned in the layers.info
+* Format of grid command
+* grid x-spacing y-spacing x-orgin y-origin
+* so the command will be grid 0.46 0.34 0.23 0.17
 
- 
-With the above command “lef write” lef file is created 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/a23e7340-f400-47af-9d07-cddc02f6e71e)
 
- 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/02a50b13-7334-4c5f-8fc1-f3339abc1628)
 
-Glimpse of lef file
- 
 
-Now based on the lef file we will insert this cell into our design picorv32 
-Before that copy the lef file into the design src directory
- 
- 
-Also copy the libs as well to the design source directory
- 
+
+* We can see that the input and output ports must lie on the intersection of vertical and horizontal tracks
+  
+* Saving those changes as a file name sky130A_vsdinv.mag
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/959499d2-961d-44a9-b6e7-48967f171f17)
+
+
+
+* File is created and the layout is opened
+  
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/a56fb323-fc90-46a7-808b-fd96c7adca34)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/ee505947-c43f-4294-9900-04f2a3335b39)
  
 
-We need to edit the config.tcl file
- 
- 
-After including the necessary lines the config.tcl file will be like
- 
-
-Now we run the synthesis again but now with the added lef 
- 
- 
-After running the synthesis
- 
-Although tns and wns was slightly decreased that was not a good results so we need to do something with respect to the timing
-So we will try using the synthesis strategy switch and see whether delay is reduced or not
- 
-
-Now if we run the synthesis step again
 
  
-We got the zero delay
+* With the above command “lef write” lef file is created 
 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/7f67898a-ef76-4eee-a890-d886c7676c27)
+
+
+* Glimpse of lef file
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c2391823-0a11-4bfc-9b87-1d7dc7bb3edf)
+
+
+* Now based on the lef file we will insert this cell into our design picorv32
+  
+* Before that copy the lef file into the design src directory
+
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/3e168e8c-d93b-43e5-b9c4-abd681c83fb0)
+
+ ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/bf632b88-0573-4d95-bc2b-12ee248c0aad)
  
 
-I have noted down the values of area and delay before and after modifying the switches
+* Also copy the libs as well to the design source directory
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/7116156b-e9dc-4a42-8daf-63dd2f408be7)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/80ae0f85-e0f7-482e-a361-206e346e0e4d)
+
+
+* We need to edit the config.tcl file
+  
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/9696f2e4-3947-4882-a787-636a0741986d)
+
+ 
+* After including the necessary lines the config.tcl file will be like
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/bc86a1ee-98f1-4c78-bc9b-63a5684311ba)
+
+
+* Now we run the synthesis again but now with the added lef 
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/47578f84-bbdf-42d3-bcfd-2904e6b615b7)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/74466707-6c0a-4f1b-b906-6f6979b4326a)
+
+
+
+* After running the synthesis
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/3f9e135c-3c3a-4622-9607-9b7e105cf07d)
+
+
+ 
+* Although tns and wns was slightly decreased that was not a good results so we need to do something with respect to the timing
+* Hence we will try using the synthesis strategy switch and see whether delay is reduced or not
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/34be9d4a-2cc3-4b67-99b3-4271bb019685)
+
+
+
+* Now if we run the synthesis step again
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/583b98c3-11ff-43d3-9a1d-1e8b7f81e4ce)
+
+* We got the zero delay
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/819feb6e-74e7-4438-9903-7306d67f5768)
+
+* With tradeoff of increase in the area
+
+
+* I have noted down the values of area and delay before and after modifying the switches
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/784e2f4b-e4a7-4b50-a285-525b9ab90b5e)
+
  
 Area got increased and delay was reduced a lot
 
