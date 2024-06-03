@@ -569,106 +569,196 @@ output fall and input rise
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/784e2f4b-e4a7-4b50-a285-525b9ab90b5e)
 
  
-Area got increased and delay was reduced a lot
+* Area got increased and delay was reduced a lot
 
-Checking whether the inverter cell is embedded or not by seeing the merged.lef
- 
-Now we can confirm that the lef file is involved in the lef file
+* Checking whether the inverter cell is embedded or not by seeing the merged.lef
 
-
-Then execute run_floorplan 
- 
-We got an issue with the floorplan 
-
-So we need to execute these commands in order to resolve this issue
- 
- 
-Now its time to run the placement
- 
-
-Placement delay
- 
-
-After floorplanning
-We will get like this
- 
-Now we can able to see the .def file created if we invoke the magic tool now to the layout after placement visually we need to do like this
- 
- 
-In the huge layout we can able to see the cell using this command
- 
-Now its time to run the cts with the command run_cts
- 
-minimum path delay
- 
-
-
-max path delay
- 
- 
-Cts completed successfully
- 
-Post cts timing analysis
-New sdc file created 
- 
-So basically we have initialized some switches related to timing some are direct parameters like
-CLOCK_PERIOD,SYNTH_MAX_FANOUT,SYNTH_CAP_LOAD etc.. and some are the derived parameters like input_delay,output_delay,cap_load etc…
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/a21adc9a-8f5d-4d33-b74b-463bd28bdb07)
 
  
- 
- 
- 
- 
- 
-Removing the clk_buffer 1 and doing the cts again
- 
-Post cts simulation with removed clock buffer 
- 
- 
- 
-Earlier the slack was violated (-0.0745) now it is fixed 
+* Now we can confirm that the lef file is involved in the lef file
 
 
+* Then execute run_floorplan
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/3d34101b-62fd-4932-a07a-744b67a1f9d2)
+
  
- 
- 
-Now inserting the clk buffer 1 again in the list
- 
+* We got an issue with the floorplan 
+
+* So we need to execute these commands in order to resolve this issue
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/58c47103-7c3f-420b-99e9-6431cd7c4872)
 
 
-DAY-5
-Generation of POWER Distribution network with command gen_pdn
- 
-     
- 
-Invoking the magic tool to observe the generated PDN for our design
- 
- 
- 
-Now we need to route all the cells for that we need to execute the below commands
- 
- 
-Using the magic tool we will see how routing done for our design
- 
- 
- 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/3937bd85-9604-4817-a5a7-49c3359c5e72)
 
+
+* Now its time to run the placement
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/ae79ade1-b30a-4a60-9167-1386acab1f14)
+
+
+* Placement delay
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/f57b7ea9-6ca3-47bf-9208-fec1b99077c9)
+
+
+* After floorplanning We will get like this
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c317ab71-a3f9-4724-9800-61aeb0d8b248)
+
+
+* Now we can able to see the .def file created if we invoke the magic tool now to the layout after placement visually we need to do like this
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/8f9f236b-cf34-41f7-ab6d-3bc32bbe6857)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/cfc3c383-a1e8-43b9-9aae-522a12c38cb4)
+
+ 
+* In the huge layout we can able to see the cell using this command
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/12eff90a-c2ab-4a82-bfdb-ee53c3b57c3f)
+
+* Now its time to run the cts with the command run_cts
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/2400a2fb-d7ae-47fb-ac1c-79a6d6d10bc0)
+
+* minimum path delay
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/66403a58-4182-4d37-9852-e95910f984cc)
+
+
+* max path delay
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/f6732e45-2e6c-41e1-acda-23348ada0714)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/88c3de5f-a9e4-485f-8c5f-deaffb89160f)
+
+
+* Cts completed successfully
+  
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/de365bf4-9437-4837-9d1f-fe6f5396341b)
+
+### Post cts timing analysis
+
+* New sdc file created
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/342f25b4-4b67-4cff-88c7-d050dc8a2132)
 
 
  
+* So basically we have initialized some switches related to timing some are direct parameters like CLOCK_PERIOD,SYNTH_MAX_FANOUT,SYNTH_CAP_LOAD etc.. and some are the derived parameters like input_delay,output_delay,cap_load etc…
 
-Fast route guide
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/ec4a8ec3-abd5-4aa4-8211-e577bb0462cc)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/3dbfdf40-452a-4018-af3a-fb035e57279f)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/325e055e-cac7-46ee-ab4a-76d3f818447e)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/b3c54f4e-cc46-4ecc-9ff6-5a22968e0680)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/88361629-23a1-4400-b1a9-5f0f92110317)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/b06a8fa0-9152-4707-8e56-2c7e2659f9c2)
+
+ 
+* Removing the clk_buffer 1 and doing the cts again
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/83246a18-1bb4-4543-8506-e3c26cd0835b)
+
+ 
+* Post cts simulation with removed clock buffer 
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/abc16c6b-f8ac-4ac0-a308-90cb87212a71)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/b51d2423-d4ba-4736-8143-23604a8c1d12)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/b9f137d6-9b27-4c27-9e7a-7521899f7c25)
+
+ 
+* Earlier the slack was violated (-0.0745) now it is fixed 
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/3fbdcd8f-d7fe-4dd7-aef8-b5f9b74e1012)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/75b59639-c831-416a-b8db-12c76f1188ac)
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/e9e7cca8-db2b-4848-8fc5-814e5f0dfbc4)
+ 
+ 
+* Now inserting the clk buffer 1 again in the list
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/198943aa-b0dc-4138-a173-5cb306c17aeb)
+
+
+### DAY-5
+
+* As a part of the final day we will deal with the creation of PDN(power distribution network) and routing.
+* 
+
+### Generation of POWER Distribution network with command gen_pdn
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/ff0396bb-736f-48e0-919e-4d8e96ca0087)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/d47a92ee-100d-447f-912a-ababac4512ae)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/ee7c07ec-6e4c-4586-b337-dbefc0c7925c)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/b896fa1c-8173-4262-baae-912bd45641af)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/0c653a56-0d55-432c-b7bc-ac474200ce13)
+
+ 
+* Invoking the magic tool to observe the generated PDN for our design
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/10ed04e0-8052-48ee-8666-6965edbdf2c4)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/b2985d49-e02f-4314-a902-c6ce3c057e0c)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/2736c43c-2a8a-44ae-b6de-9b9a573a05d5)
+
+ 
+* Now we need to route all the cells for that we need to execute the below commands
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/64be3178-b7f8-4c54-878d-6b99b8505dcd)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/5f85bc92-ab66-409e-8836-8f9160f51624)
+ 
+ 
+* Using the magic tool we will see how routing done for our design
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/6e6b0522-521e-4ada-a0e1-9027582bd38f)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/bd808d1b-6b89-488b-98de-7c28ee49349f)
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/76de99ba-e231-4759-9efa-651d9b55e3e2)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/0ddcf4d0-52e5-41da-b194-47d85e8f7ed2)
+
+
+ * Fast route guide
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/0d633bc0-317d-4322-9e80-a2399174b43b)
+
  
 
-Fast route def file
- 
-Post route parasitic extraction
-During the routing itself the spef file is generated 
- 
- 
- 
-Post route timing analysis using OpenSTA tool
+* Fast route def file
 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/0cc7c87e-8cd1-42d9-adef-62b6929de391)
+
+ 
+### Post route parasitic extraction
+
+* During the routing itself the spef file is generated 
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/3ed68f37-09f6-46d6-bf69-46f85831d380)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/d93d5dd7-6248-4126-a50b-f8b53e61931f)
+
+
+* After going through upto routing we will get a snip of our design like this
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/cf7eb7c2-c69a-4b3d-856c-c49a54b3302f)
 
 
 
