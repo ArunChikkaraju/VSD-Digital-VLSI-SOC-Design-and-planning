@@ -322,6 +322,305 @@ output fall and input rise
 
 
 
+ ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/aabd980d-6977-48e5-b16a-9913ef6af98f)
+
+
+
+* After extracting the zip file drc tests go to that directory and observe the files in it
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/30c9adde-adb4-464c-8bc8-2ea659a13fc0)
+
+ 
+* We can see various .mag files with errors in it which helps us to understand the DRC rules
+
+
+* Now invoke the magic tool with the command magic -d XR & and open the net3.mag inside the tool
+ 
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/d6b7e534-6130-41e4-898b-a563792a28bd)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/5bcb4b71-8cf5-45ff-afab-b3b50a8985a5)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/f62392c8-69b6-4a12-a4dc-3ca07bac0d2f)
+
+* Now in order to see the DRC errors select the entire design by pressing S and open the tkcon window and type “ drc why “ 
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/c631afe4-b9b7-4b09-8fd6-124a76ae69cd)
+
+ 
+* We can able to see some errors with the description as well
+* In order to understand about that violations in detail we need to go to the website google skywater documentation
+* In that we need to select design rules and then the periphery rules to see the description of the rules for each layer in skywater 130 pdk
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/9cbc8eef-029a-4857-b2c1-1c565b6211e3)
+
+
+* Now based on the errors generated in the tkcon window we can see the description of those errors in the documentation
+ 
+ ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/8dd333a6-f042-4b53-b710-3f942b976554)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/bab237df-6378-456d-b1b3-4107dcff543c)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/122d0be1-ce81-498e-bb37-d338a21a919d)
+
+ ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/069abb64-4008-4c20-834e-448ce5ae339b)
+
+ 
+
+
+* Create a empty box like this
+  
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/69e888cb-ce1a-4e85-9807-b37cbd496f50)
+
+ 
+* Place the mouse pointer at m3 contact and click on the p to paint it in the box which we have created
+
+  
+ ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/7ea891bd-70da-44d4-997c-ff4b21cf8fe6)
+
+ ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/bcc520b5-b911-4445-a0d4-374ae381a6e2)
+
+
+* Then in the tkcon window press cif see VIA2 to see like this
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/2e770149-31f5-443c-8c26-50563f51ac44)
+
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/7317f777-7bd0-45c8-b34b-4d65bef94051)
+
+
+
+### Lab exercise to fix poly.9 error in Sky130 tech-file
+
+* Open poly.mag file
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/e195a015-39b2-4a99-bb62-4256bec0c8a9)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/9b48e264-c761-4f00-97c9-7b7efcac5f36)
+
+* We can see that there are so many problems in the .mag file if we consider one particular problem which is poly.9
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/e75e50f5-4930-4056-871d-bb73dad16aaa)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/6f350da2-384d-4fa4-b710-98232959109e)
+
+
+* We can see clearly that the spacing is less than required 
+* Required : 0.480um
+* Actual: 0.320um
+
+* To debug this problem we need to inspect the file sky130.tech Search for poly.9 which is the problem we are interested in There are two instances in a file where poly.9 is found
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/55bd769f-8e69-4b9f-af63-3942b5d44e7c)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/27ac69d8-05bc-441b-b1db-cd669b3ffc8b)
+
+ 
+* Added these lines
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/a5159ba6-2633-4a98-a27d-1b221dd13def)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/b5c2d774-9638-40c5-8cf9-4d6eba6ae615)
+
+
+
+* After saving the file in the tkcon window load the tech file and run drc check again
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/4bfca793-0878-4147-972d-d4123f27271d)
+
+
+
+### DRC error as geometrical construct
+
+* Load nwell.mag and see for errors after that run the below commands
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/548b7f4b-e3b2-4514-ad24-25fb76509fc4)
+
+ 
+* In order to rectify the errors open the tech file
+  
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/5ad61392-d924-437c-bdba-01d32613a4cf)
+
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/9a49dfdc-e90d-4e26-86e8-88a0767a3bce)
+
+ 
+ 
+* Added lines in the tech file
+ 
+![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/11864a0e-5b27-411e-b30d-1e6cb2a4d56a)
+
+
+DAY-4
+So far we have done with the design setup , floorplan , placement and finally learned about the stdcell characterization using the mag file
+For the placement of the new cell in the existing design we may not need the all intricate details ( mag file)
+Only information is needed is about the boundaries pwr,gnd,out ports
+That’s where lef file is generated which is gives the overview of the cell 
+By doing this one can secure the IP (Intellectual property) by hiding the exact details and showing the necessary details only
+First of all, we need to check for the std cell guidelines
+	The input and output ports must lie on the intersection of vertical and horizontal tracks
+	The width of the standard cell must be the multiple powers of the track pitch 
+
+ 
+ 
+Now open the inverter layout again then press g to enable the grid 
+Change the grid dimensions accordingly
+Format of grid command
+grid x-spacing y-spacing x-orgin y-origin
+so the command will be grid 0.46 0.34 0.23 0.17
+ 
+ 
+We can see that the input and output ports must lie on the intersection of vertical and horizontal tracks
+Saving those changes as a file name sky130A_vsdinv.mag
+ 
+ 
+File is created and the layout is opened
+
+ 
+With the above command “lef write” lef file is created 
+
+ 
+
+Glimpse of lef file
+ 
+
+Now based on the lef file we will insert this cell into our design picorv32 
+Before that copy the lef file into the design src directory
+ 
+ 
+Also copy the libs as well to the design source directory
+ 
+ 
+
+We need to edit the config.tcl file
+ 
+ 
+After including the necessary lines the config.tcl file will be like
+ 
+
+Now we run the synthesis again but now with the added lef 
+ 
+ 
+After running the synthesis
+ 
+Although tns and wns was slightly decreased that was not a good results so we need to do something with respect to the timing
+So we will try using the synthesis strategy switch and see whether delay is reduced or not
+ 
+
+Now if we run the synthesis step again
+
+ 
+We got the zero delay
+
+ 
+
+I have noted down the values of area and delay before and after modifying the switches
+ 
+Area got increased and delay was reduced a lot
+
+Checking whether the inverter cell is embedded or not by seeing the merged.lef
+ 
+Now we can confirm that the lef file is involved in the lef file
+
+
+Then execute run_floorplan 
+ 
+We got an issue with the floorplan 
+
+So we need to execute these commands in order to resolve this issue
+ 
+ 
+Now its time to run the placement
+ 
+
+Placement delay
+ 
+
+After floorplanning
+We will get like this
+ 
+Now we can able to see the .def file created if we invoke the magic tool now to the layout after placement visually we need to do like this
+ 
+ 
+In the huge layout we can able to see the cell using this command
+ 
+Now its time to run the cts with the command run_cts
+ 
+minimum path delay
+ 
+
+
+max path delay
+ 
+ 
+Cts completed successfully
+ 
+Post cts timing analysis
+New sdc file created 
+ 
+So basically we have initialized some switches related to timing some are direct parameters like
+CLOCK_PERIOD,SYNTH_MAX_FANOUT,SYNTH_CAP_LOAD etc.. and some are the derived parameters like input_delay,output_delay,cap_load etc…
+
+ 
+ 
+ 
+ 
+ 
+ 
+Removing the clk_buffer 1 and doing the cts again
+ 
+Post cts simulation with removed clock buffer 
+ 
+ 
+ 
+Earlier the slack was violated (-0.0745) now it is fixed 
+
+
+ 
+ 
+ 
+Now inserting the clk buffer 1 again in the list
+ 
+
+
+DAY-5
+Generation of POWER Distribution network with command gen_pdn
+ 
+     
+ 
+Invoking the magic tool to observe the generated PDN for our design
+ 
+ 
+ 
+Now we need to route all the cells for that we need to execute the below commands
+ 
+ 
+Using the magic tool we will see how routing done for our design
+ 
+ 
+ 
+
+
+
+ 
+
+Fast route guide
+ 
+
+Fast route def file
+ 
+Post route parasitic extraction
+During the routing itself the spef file is generated 
+ 
+ 
+ 
+Post route timing analysis using OpenSTA tool
+
+
+
+
+
+
+
 
 
 
