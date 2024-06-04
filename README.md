@@ -761,6 +761,13 @@ magic -T /home/vsduser/desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![image](https://github.com/ArunChikkaraju/VSD-Digital-VLSI-SOC-Design-and-planning/assets/169176599/cf7eb7c2-c69a-4b3d-856c-c49a54b3302f)
 
 
+## CONCLUSION
+* During this workshop I have understood that physical design flow by taking the one design as an example picorv32a.picoRV32 is a small, simple, and efficient RISC-V CPU core that is open-source and designed for use in FPGA (Field-Programmable Gate Array) and ASIC (Application-Specific Integrated Circuit) designs.
+* I have uderstood how the different opensource tools like magic,openSTA,openroad etc... are contributed in the design flow
+* Overall its a good experience and learned the openroad flow in a better way
+* Finally I would like to thank Kunal Ghosh for conducting this workshop and I would love to attend the future workshops or hackathons in future as well.
+
+
 
 
 
